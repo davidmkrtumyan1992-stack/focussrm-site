@@ -63,22 +63,30 @@ export function HeroLiveStrip() {
           <path d="M0 164 C 90 164 80 95 200 95" fill="none" stroke="rgba(127,209,188,.45)" strokeWidth={1.4} strokeDasharray="5 11" style={{ animation: "fsDash 2.8s linear infinite" }} />
         </svg>
 
-        <span
-          aria-hidden
-          className="h-4 w-px lg:hidden"
-          style={{ borderLeft: "1px dashed rgba(127,209,188,.4)" }}
-        />
+        <svg viewBox="0 0 600 60" preserveAspectRatio="none" className="block h-[46px] w-full lg:hidden" aria-hidden>
+          <g fill="none" strokeWidth={1.4} strokeDasharray="5 11">
+            <path d="M300 60 C 300 34 40 30 10 0" stroke="rgba(127,209,188,.34)" style={{ animation: "fsDash 3s linear infinite" }} />
+            <path d="M300 60 C 300 34 140 28 105 0" stroke="rgba(127,209,188,.4)" style={{ animation: "fsDash 2.7s linear infinite" }} />
+            <path d="M300 60 L300 0" stroke="rgba(127,209,188,.5)" style={{ animation: "fsDash 2.2s linear infinite" }} />
+            <path d="M300 60 C 300 34 460 28 495 0" stroke="rgba(127,209,188,.4)" style={{ animation: "fsDash 2.9s linear infinite" }} />
+            <path d="M300 60 C 300 34 560 30 590 0" stroke="rgba(127,209,188,.34)" style={{ animation: "fsDash 3.2s linear infinite" }} />
+          </g>
+        </svg>
 
         <div className="flex w-full max-w-[240px] shrink-0 flex-col items-center gap-1.5 rounded-2xl border border-accent/[0.18] bg-background/55 px-2 pt-2 pb-1.5">
           <ConveyorBelt />
           <span className="text-[9px] font-bold tracking-[2.5px] text-accent">F O C U S S R M</span>
         </div>
 
-        <span
-          aria-hidden
-          className="h-4 w-px lg:hidden"
-          style={{ borderLeft: "1px dashed rgba(127,209,188,.4)" }}
-        />
+        <svg viewBox="0 0 600 60" preserveAspectRatio="none" className="block h-[46px] w-full lg:hidden" aria-hidden>
+          <g fill="none" strokeWidth={1.4} strokeDasharray="5 11">
+            <path d="M300 0 C 300 26 40 30 10 60" stroke="rgba(127,209,188,.34)" style={{ animation: "fsDash 3s linear infinite" }} />
+            <path d="M300 0 C 300 26 140 32 105 60" stroke="rgba(127,209,188,.4)" style={{ animation: "fsDash 2.7s linear infinite" }} />
+            <path d="M300 0 L300 60" stroke="rgba(127,209,188,.5)" style={{ animation: "fsDash 2.2s linear infinite" }} />
+            <path d="M300 0 C 300 26 460 32 495 60" stroke="rgba(127,209,188,.4)" style={{ animation: "fsDash 2.9s linear infinite" }} />
+            <path d="M300 0 C 300 26 560 30 590 60" stroke="rgba(127,209,188,.34)" style={{ animation: "fsDash 3.2s linear infinite" }} />
+          </g>
+        </svg>
 
         <svg viewBox="0 0 200 190" preserveAspectRatio="none" className="hidden h-[190px] min-w-[20px] flex-1 lg:block">
           <path d="M0 95 L 200 95" fill="none" stroke="rgba(127,209,188,.45)" strokeWidth={1.4} strokeDasharray="5 11" style={{ animation: "fsDash 2s linear infinite" }} />

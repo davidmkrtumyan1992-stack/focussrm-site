@@ -32,7 +32,7 @@ export function FinalCta() {
                 просто работайте.
               </p>
               <div className="mt-9 flex justify-center">
-                <Button href="mailto:hello@focussrm.com?subject=Пробный%20доступ%20Focussrm" variant="primary">
+                <Button href="mailto:info@focussrm.ru?subject=Пробный%20доступ%20Focussrm" variant="primary">
                   Подключить бесплатно
                 </Button>
               </div>

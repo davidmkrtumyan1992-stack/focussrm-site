@@ -83,6 +83,15 @@ export function Benefits() {
           </div>
 
           <Reveal delay={0.2} className="relative mt-2 flex h-[110px] items-end justify-center lg:hidden">
+            <svg viewBox="0 0 300 130" preserveAspectRatio="none" className="absolute inset-x-0 top-0 h-[70px] w-full" aria-hidden>
+              <g fill="none" stroke="#7FD1BC" strokeWidth={1.1} strokeDasharray="5 11">
+                <path d="M150 70 C 150 40 20 34 5 0" style={{ animation: "fsDash 3s linear infinite" }} />
+                <path d="M150 70 C 150 40 70 32 52 0" style={{ animation: "fsDash 2.7s linear infinite" }} />
+                <path d="M150 70 L150 0" style={{ animation: "fsDash 2.2s linear infinite" }} />
+                <path d="M150 70 C 150 40 230 32 248 0" style={{ animation: "fsDash 2.9s linear infinite" }} />
+                <path d="M150 70 C 150 40 280 34 295 0" style={{ animation: "fsDash 3.2s linear infinite" }} />
+              </g>
+            </svg>
             <div
               className="absolute inset-x-6 bottom-[18px] h-[1.2px]"
               style={{ background: "rgba(127,209,188,.7)" }}
