@@ -115,7 +115,12 @@ export function Modules() {
               ))}
             </div>
 
-            <div className="flex items-center justify-center py-4 lg:row-span-6 lg:py-0">
+            <div className="flex flex-col items-center justify-center gap-1 py-4 lg:row-span-6 lg:py-0">
+              <svg viewBox="0 0 200 52" preserveAspectRatio="none" className="block h-[52px] w-[70%] lg:hidden" aria-hidden>
+                <path d="M28 0 C 28 30 100 22 100 52" fill="none" stroke="rgba(127,209,188,.4)" strokeWidth={1.4} strokeDasharray="5 11" style={{ animation: "fsDash 2.6s linear infinite" }} />
+                <path d="M100 0 L100 52" fill="none" stroke="rgba(127,209,188,.5)" strokeWidth={1.4} strokeDasharray="5 11" style={{ animation: "fsDash 2.2s linear infinite" }} />
+                <path d="M172 0 C 172 30 100 22 100 52" fill="none" stroke="rgba(127,209,188,.4)" strokeWidth={1.4} strokeDasharray="5 11" style={{ animation: "fsDash 3s linear infinite" }} />
+              </svg>
               <div
                 className="relative flex h-[160px] w-[160px] flex-col items-center justify-center gap-1.5 rounded-full lg:h-[196px] lg:w-[196px]"
                 style={{
@@ -133,6 +138,11 @@ export function Modules() {
                   FOCUSSRM
                 </span>
               </div>
+              <svg viewBox="0 0 200 52" preserveAspectRatio="none" className="block h-[52px] w-[70%] lg:hidden" aria-hidden>
+                <path d="M100 0 C 100 22 28 30 28 52" fill="none" stroke="rgba(127,209,188,.4)" strokeWidth={1.4} strokeDasharray="5 11" style={{ animation: "fsDash 2.6s linear infinite" }} />
+                <path d="M100 0 L100 52" fill="none" stroke="rgba(127,209,188,.5)" strokeWidth={1.4} strokeDasharray="5 11" style={{ animation: "fsDash 2.2s linear infinite" }} />
+                <path d="M100 0 C 100 22 172 30 172 52" fill="none" stroke="rgba(127,209,188,.4)" strokeWidth={1.4} strokeDasharray="5 11" style={{ animation: "fsDash 3s linear infinite" }} />
+              </svg>
             </div>
 
             <div className="contents lg:grid lg:row-span-6 lg:grid-rows-subgrid">

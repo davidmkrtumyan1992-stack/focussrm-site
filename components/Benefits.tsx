@@ -82,28 +82,34 @@ export function Benefits() {
             ))}
           </div>
 
-          <Reveal delay={0.2} className="relative mt-2 flex h-[110px] items-end justify-center lg:hidden">
-            <svg viewBox="0 0 300 130" preserveAspectRatio="none" className="absolute inset-x-0 top-0 h-[70px] w-full" aria-hidden>
-              <g fill="none" stroke="#7FD1BC" strokeWidth={1.1} strokeDasharray="5 11">
-                <path d="M150 70 C 150 40 20 34 5 0" style={{ animation: "fsDash 3s linear infinite" }} />
-                <path d="M150 70 C 150 40 70 32 52 0" style={{ animation: "fsDash 2.7s linear infinite" }} />
-                <path d="M150 70 L150 0" style={{ animation: "fsDash 2.2s linear infinite" }} />
-                <path d="M150 70 C 150 40 230 32 248 0" style={{ animation: "fsDash 2.9s linear infinite" }} />
-                <path d="M150 70 C 150 40 280 34 295 0" style={{ animation: "fsDash 3.2s linear infinite" }} />
+          <Reveal delay={0.2} className="relative mt-2 h-[140px] lg:hidden">
+            <svg viewBox="0 0 300 130" preserveAspectRatio="none" className="absolute inset-x-0 top-0 h-[100px] w-full" aria-hidden>
+              <g fill="none" stroke="#7FD1BC" strokeWidth={1.1} strokeOpacity={0.5}>
+                <path d="M10 0 C 10 60 140 60 150 130" strokeDasharray="5 11" style={{ animation: "fsDash 2.4s linear infinite" }} />
+                <path d="M78 0 C 78 66 145 62 150 130" strokeDasharray="5 11" style={{ animation: "fsDash 2.7s linear infinite" }} />
+                <path d="M150 0 L150 130" strokeDasharray="5 11" style={{ animation: "fsDash 2.2s linear infinite" }} />
+                <path d="M222 0 C 222 66 155 62 150 130" strokeDasharray="5 11" style={{ animation: "fsDash 3s linear infinite" }} />
+                <path d="M290 0 C 290 60 160 60 150 130" strokeDasharray="5 11" style={{ animation: "fsDash 3.3s linear infinite" }} />
               </g>
             </svg>
             <div
-              className="absolute inset-x-6 bottom-[18px] h-[1.2px]"
+              className="absolute inset-x-0 top-[100px] h-[1.2px]"
               style={{ background: "rgba(127,209,188,.7)" }}
             />
-            <Image
-              src="/product/observer.png"
-              alt="Наблюдатель с подзорной трубой"
-              width={230}
-              height={480}
-              className="relative h-[92px] w-auto max-w-none"
-              style={{ filter: "invert(1) brightness(1.35)" }}
+            <div
+              className="absolute left-1/2 top-[100px] h-[5px] w-16 rounded-full"
+              style={{ transform: "translate(-50%, -1px)", background: "radial-gradient(closest-side, rgba(127,209,188,.28), rgba(127,209,188,0))" }}
             />
+            <div className="absolute left-1/2 top-[100px] h-[92px] w-[44px] overflow-hidden" style={{ transform: "translate(-50%, -100%)" }}>
+              <Image
+                src="/product/observer.png"
+                alt="Наблюдатель с подзорной трубой"
+                width={230}
+                height={480}
+                className="absolute left-[-41px] top-[-31px] h-auto w-[230px] max-w-none"
+                style={{ filter: "invert(1) brightness(1.35)" }}
+              />
+            </div>
           </Reveal>
 
           <Reveal delay={0.2} className="relative hidden min-h-[420px] self-stretch lg:block">
