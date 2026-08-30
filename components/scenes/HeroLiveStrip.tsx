@@ -56,19 +56,31 @@ export function HeroLiveStrip() {
         })}
       </div>
 
-      <div className="hidden items-center gap-3 lg:flex">
-        <svg viewBox="0 0 200 190" preserveAspectRatio="none" className="h-[190px] min-w-[20px] flex-1">
+      <div className="flex flex-col items-center gap-2 py-2 lg:flex-row lg:gap-3 lg:py-0">
+        <svg viewBox="0 0 200 190" preserveAspectRatio="none" className="hidden h-[190px] min-w-[20px] flex-1 lg:block">
           <path d="M0 26 C 90 26 80 95 200 95" fill="none" stroke="rgba(127,209,188,.45)" strokeWidth={1.4} strokeDasharray="5 11" style={{ animation: "fsDash 2.4s linear infinite" }} />
           <path d="M0 95 L 200 95" fill="none" stroke="rgba(127,209,188,.45)" strokeWidth={1.4} strokeDasharray="5 11" style={{ animation: "fsDash 2s linear infinite" }} />
           <path d="M0 164 C 90 164 80 95 200 95" fill="none" stroke="rgba(127,209,188,.45)" strokeWidth={1.4} strokeDasharray="5 11" style={{ animation: "fsDash 2.8s linear infinite" }} />
         </svg>
 
-        <div className="flex w-[240px] shrink-0 flex-col items-center gap-1.5 rounded-2xl border border-accent/[0.18] bg-background/55 px-2 pt-2 pb-1.5">
+        <span
+          aria-hidden
+          className="h-4 w-px lg:hidden"
+          style={{ borderLeft: "1px dashed rgba(127,209,188,.4)" }}
+        />
+
+        <div className="flex w-full max-w-[240px] shrink-0 flex-col items-center gap-1.5 rounded-2xl border border-accent/[0.18] bg-background/55 px-2 pt-2 pb-1.5">
           <ConveyorBelt />
           <span className="text-[9px] font-bold tracking-[2.5px] text-accent">F O C U S S R M</span>
         </div>
 
-        <svg viewBox="0 0 200 190" preserveAspectRatio="none" className="h-[190px] min-w-[20px] flex-1">
+        <span
+          aria-hidden
+          className="h-4 w-px lg:hidden"
+          style={{ borderLeft: "1px dashed rgba(127,209,188,.4)" }}
+        />
+
+        <svg viewBox="0 0 200 190" preserveAspectRatio="none" className="hidden h-[190px] min-w-[20px] flex-1 lg:block">
           <path d="M0 95 L 200 95" fill="none" stroke="rgba(127,209,188,.45)" strokeWidth={1.4} strokeDasharray="5 11" style={{ animation: "fsDash 2s linear infinite" }} />
           <path d="M0 95 C 90 95 80 34 200 34" fill="none" stroke="rgba(127,209,188,.3)" strokeWidth={1.4} strokeDasharray="5 11" style={{ animation: "fsDash 2.6s linear infinite" }} />
           <path d="M0 95 C 90 95 80 156 200 156" fill="none" stroke="rgba(127,209,188,.3)" strokeWidth={1.4} strokeDasharray="5 11" style={{ animation: "fsDash 3s linear infinite" }} />

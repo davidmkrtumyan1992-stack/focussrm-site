@@ -82,6 +82,21 @@ export function Benefits() {
             ))}
           </div>
 
+          <Reveal delay={0.2} className="relative mt-2 flex h-[110px] items-end justify-center lg:hidden">
+            <div
+              className="absolute inset-x-6 bottom-[18px] h-[1.2px]"
+              style={{ background: "rgba(127,209,188,.7)" }}
+            />
+            <Image
+              src="/product/observer.png"
+              alt="Наблюдатель с подзорной трубой"
+              width={230}
+              height={480}
+              className="relative h-[92px] w-auto max-w-none"
+              style={{ filter: "invert(1) brightness(1.35)" }}
+            />
+          </Reveal>
+
           <Reveal delay={0.2} className="relative hidden min-h-[420px] self-stretch lg:block">
             <svg
               viewBox="0 0 460 1000"
