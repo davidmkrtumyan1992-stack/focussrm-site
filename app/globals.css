@@ -1,26 +1,97 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #070a09;
+  --surface: #0b100e;
+  --surface-raised: #131c19;
+  --border: #1e2b27;
+  --foreground: #e8f1ee;
+  --muted: #9bb2ac;
+  --muted-dim: #6f8781;
+  --accent: #7fd1bc;
+  --accent-foreground: #06100d;
+  --caution: #e8b13f;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-border: var(--border);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-muted-dim: var(--muted-dim);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-caution: var(--caution);
+  --font-sans: var(--font-golos);
+  --font-mono: var(--font-plex-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--border);
+}
+
+html {
+  color-scheme: dark;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes fsGlow {
+  0%, 100% { opacity: .55; transform: translate3d(0, 0, 0) scale(1); }
+  50% { opacity: .85; transform: translate3d(0, -18px, 0) scale(1.06); }
+}
+@keyframes fsSpin { to { transform: rotate(360deg); } }
+@keyframes fsSpinBack { to { transform: rotate(-360deg); } }
+@keyframes fsFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes fsDash { to { stroke-dashoffset: -64; } }
+@keyframes fsFade {
+  0% { opacity: 0; transform: translateY(6px); }
+  18% { opacity: 1; transform: translateY(0); }
+  82% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-6px); }
+}
+@keyframes fsRing {
+  0% { transform: scale(.92); opacity: .75; }
+  100% { transform: scale(1.32); opacity: 0; }
+}
+@keyframes fsPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(127, 209, 188, .35); }
+  50% { box-shadow: 0 0 0 14px rgba(127, 209, 188, 0); }
+}
+@keyframes fsBelt {
+  0%, 88% { transform: translateX(0); }
+  100% { transform: translateX(140px); }
+}
+@keyframes fsClawRun {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(420px); }
+}
+@keyframes fsClawGrip {
+  0%, 37% { transform: scaleX(1); }
+  42%, 58% { transform: scaleX(2.1); }
+  64%, 100% { transform: scaleX(1); }
+}
+@keyframes fsPack {
+  0% { transform: translate(-7px, 92px); }
+  40% { transform: translate(161px, 92px); }
+  44%, 44.1% { transform: translate(161px, 174px); }
+  50%, 94% { transform: translate(301px, 174px); }
+  100% { transform: translate(441px, 174px); }
 }
