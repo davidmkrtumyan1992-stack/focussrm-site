@@ -22,7 +22,7 @@ export function OrbitCard() {
           >
           <div
             className="relative z-[3] flex max-w-[560px] flex-col p-6 pb-5 sm:p-9 sm:pb-8 lg:p-[44px] lg:pb-10"
-            style={{ background: "#070A09", borderTopLeftRadius: 44, borderBottomRightRadius: 52 }}
+            style={{ background: "#070A09", borderRadius: 44 }}
           >
             <div className="mb-3.5 text-[13px] tracking-[0.14em] uppercase text-accent">Одна карточка</div>
             <h2 className="m-0 text-[27px] font-bold leading-[1.12] tracking-[-0.03em] sm:text-[36px] lg:text-[42px]">

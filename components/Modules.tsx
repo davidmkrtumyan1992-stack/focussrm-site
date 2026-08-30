@@ -32,7 +32,7 @@ const linksRight = [8.5, 25, 41.5, 58.5, 75, 91.5].map((y, i) => ({
 function ModuleCard({ num, title, text }: { num: string; title: string; text: string }) {
   return (
     <div
-      className="grid grid-cols-[52px_1fr] items-start gap-4 rounded-[26px] border p-5"
+      className="grid h-full grid-cols-[52px_1fr] items-start gap-4 rounded-[26px] border p-5"
       style={{
         background: "linear-gradient(102deg, rgba(46,125,107,.2), rgba(11,16,14,.72) 62%)",
         borderColor: "rgba(127,209,188,.16)",
@@ -106,10 +106,10 @@ export function Modules() {
             </g>
           </svg>
 
-          <div className="relative grid gap-3.5 lg:grid-cols-[1fr_minmax(200px,240px)_1fr] lg:grid-rows-6">
+          <div className="relative grid gap-3.5 lg:grid-cols-[1fr_minmax(200px,240px)_1fr] lg:grid-rows-[repeat(6,minmax(148px,auto))]">
             <div className="contents lg:grid lg:row-span-6 lg:grid-rows-subgrid">
               {modulesLeft.map((m) => (
-                <Reveal key={m.title} delay={0.02}>
+                <Reveal key={m.title} delay={0.02} className="h-full">
                   <ModuleCard num={m.num} title={m.title} text={m.text} />
                 </Reveal>
               ))}
@@ -137,7 +137,7 @@ export function Modules() {
 
             <div className="contents lg:grid lg:row-span-6 lg:grid-rows-subgrid">
               {modulesRight.map((m) => (
-                <Reveal key={m.title} delay={0.02}>
+                <Reveal key={m.title} delay={0.02} className="h-full">
                   <ModuleCard num={m.num} title={m.title} text={m.text} />
                 </Reveal>
               ))}

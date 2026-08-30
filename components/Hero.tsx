@@ -58,7 +58,7 @@ export function Hero() {
 
             <div className="relative z-[1] flex flex-col items-start lg:flex-row">
               <div
-                className="relative z-[3] rounded-tl-[44px] rounded-br-[52px] p-6 sm:p-8 lg:p-[42px]"
+                className="relative z-[3] rounded-[44px] p-6 sm:p-8 lg:p-[42px]"
                 style={{ background: "rgba(7,10,9,.5)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)" }}
               >
                 <div
