@@ -63,9 +63,17 @@ export function Footer() {
               </a>
             ))}
             <div className="mt-1 text-[13px] leading-relaxed text-muted-dim">
-              ИНН 0000000000 · ОГРН 0000000000000
+              АМБАРЦУМЯН ТИГРАН СЕРЁЖАЕВИЧ (ИП)
               <br />
-              Адрес: —
+              Адрес: проезд Призаводской Рудник 1-й, д. 14, Тульская область, г. Тула
+              <br />
+              ИНН: 502499364493
+              <br />
+              Р/с: 40802810002590012896 (RUR)
+              <br />
+              Банк: АО «АЛЬФА-БАНК», БИК 044525593
+              <br />
+              К/с: 30101810200000000593
               <br />
               <a href="mailto:info@focussrm.ru" className="text-muted-dim transition-colors hover:text-foreground">
                 info@focussrm.ru
