@@ -25,7 +25,7 @@ export function HeroVideoLayer({
 
   return (
     <>
-      <div className="absolute inset-0">
+      <div className="absolute inset-0" style={{ backgroundColor: "#070A09" }}>
         {reduce ? (
           <Image src={poster} alt={alt} fill priority className="object-cover" style={{ objectPosition: "72% 50%" }} />
         ) : (
@@ -39,7 +39,7 @@ export function HeroVideoLayer({
             poster={poster}
             aria-label={alt}
             className="h-full w-full object-cover"
-            style={{ objectPosition: "72% 50%", transform: "translateZ(0)" }}
+            style={{ objectPosition: "72% 50%", transform: "translateZ(0)", backgroundColor: "#070A09" }}
           >
             {mobileSrc && (
               <>

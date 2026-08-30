@@ -12,11 +12,11 @@ export function Integrations() {
             Подключается к
           </span>
 
-          <div className="flex flex-wrap items-center gap-3.5">
+          <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-3.5">
             {MARKETPLACES.map((m) => (
               <div
                 key={m.key}
-                className="flex items-center gap-3.5 rounded-2xl border border-border/70 bg-background/40 py-3 pr-5 pl-3"
+                className="flex w-full items-center gap-3.5 rounded-2xl border border-border/70 bg-background/40 py-3 pr-5 pl-3 sm:w-auto"
               >
                 <Image src={m.iconLg} alt={m.name} width={44} height={44} className="rounded-[13px]" />
                 <span className="flex flex-col gap-1.5">
