@@ -50,7 +50,7 @@ export function Screenshots() {
           </h2>
         </Reveal>
 
-        <div className="mt-10 grid gap-4 lg:grid-cols-[1.6fr_1fr]">
+        <div className="mt-10 grid items-start gap-4 lg:grid-cols-[1.6fr_1fr]">
           <Reveal delay={0.06}>
             <Frame
               label="Панель управления"
