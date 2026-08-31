@@ -110,7 +110,7 @@ export function Hero() {
                 </div>
               </div>
 
-              <div className="relative z-[3] flex items-center gap-3 bg-[rgba(7,10,9,.88)] px-6 pt-6 lg:bg-transparent lg:ml-auto lg:px-8 lg:pt-[30px]">
+              <div className="relative z-[3] flex w-full items-center gap-3 bg-[rgba(7,10,9,.88)] px-6 pt-6 lg:w-auto lg:bg-transparent lg:ml-auto lg:px-8 lg:pt-[30px]">
                 <span
                   className="relative flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-[14px] border"
                   style={{
