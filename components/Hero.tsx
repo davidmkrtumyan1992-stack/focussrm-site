@@ -110,7 +110,7 @@ export function Hero() {
                 </div>
               </div>
 
-              <div className="relative z-[3] flex items-center gap-3 px-6 pt-6 lg:ml-auto lg:px-8 lg:pt-[30px]">
+              <div className="relative z-[3] flex items-center gap-3 bg-[rgba(7,10,9,.88)] px-6 pt-6 lg:bg-transparent lg:ml-auto lg:px-8 lg:pt-[30px]">
                 <span
                   className="relative flex h-[42px] w-[42px] shrink-0 items-center justify-center rounded-[14px] border"
                   style={{
@@ -142,10 +142,7 @@ export function Hero() {
               </div>
             </div>
 
-            <div
-              className="relative z-[1]"
-              style={{ background: "linear-gradient(to bottom, rgba(7,10,9,.35), rgba(7,10,9,.92) 35%)" }}
-            >
+            <div className="relative z-[1] bg-[rgba(7,10,9,.88)] lg:bg-transparent">
               <HeroLiveStrip />
             </div>
           </div>
