@@ -58,8 +58,8 @@ export function Hero() {
 
             <div className="relative z-[1] flex flex-col items-start lg:flex-row">
               <div
-                className="relative z-[3] rounded-[44px] p-6 sm:p-8 lg:p-[42px]"
-                style={{ background: "rgba(7,10,9,.5)", backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)" }}
+                className="relative z-[3] rounded-[44px] bg-[rgba(7,10,9,.94)] p-6 sm:p-8 lg:bg-[rgba(7,10,9,.5)] lg:p-[42px]"
+                style={{ backdropFilter: "blur(16px)", WebkitBackdropFilter: "blur(16px)" }}
               >
                 <div
                   className="mb-7 inline-flex items-center gap-2.5 rounded-full border px-3.5 py-1.5 text-[13px]"
