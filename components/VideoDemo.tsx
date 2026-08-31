@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Play } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "./ui/Container";
 import { Reveal } from "./ui/Reveal";
@@ -10,27 +10,40 @@ const videos = [
     label: "Единый остаток",
     title: "Один остаток на все площадки",
     text: "Приёмка, списание, инвентаризация: автоматическое уменьшение при заказе с любого маркетплейса.",
+    src: "/product/video-demo-stock.mp4",
+    poster: "/product/video-demo-stock-poster.jpg",
   },
   {
     label: "Дедупликация",
     title: "Объединение карточек-дублей",
     text: "Алгоритм находит дубли по штрихкоду и похожести названия, объединяет их и сохраняет всю историю.",
+    src: "/product/video-demo-dedup.mp4",
+    poster: "/product/video-demo-dedup-poster.jpg",
   },
   {
     label: "Сопоставление",
     title: "Привязка к листингам площадок",
     text: "По артикулу или штрихкоду. Спорные случаи система показывает вам, а не решает наугад.",
+    src: "/product/video-demo-match.mp4",
+    poster: "/product/video-demo-match-poster.jpg",
   },
   {
     label: "Отчёты и прибыль",
     title: "Маржа, а не выручка",
     text: "Закупка, логистика и комиссия площадки уже учтены: на экране чистая прибыль по каждому товару и периоду.",
+    src: "/product/video-demo-reports.mp4",
+    poster: "/product/video-demo-reports-poster.jpg",
   },
 ];
 
 export function VideoDemo() {
   const [active, setActive] = useState(0);
+  const [playing, setPlaying] = useState(false);
   const video = videos[active];
+
+  useEffect(() => {
+    setPlaying(false);
+  }, [active]);
 
   return (
     <section id="video" className="scroll-mt-[90px] pb-[clamp(62px,9vw,110px)]">
@@ -65,21 +78,47 @@ export function VideoDemo() {
         </Reveal>
 
         <Reveal delay={0.12}>
-          <div className="relative mt-6 overflow-hidden rounded-3xl border border-border bg-surface shadow-[0_40px_120px_-40px_rgba(127,209,188,0.25)]">
-            <div className="flex aspect-video flex-col items-center justify-center bg-[radial-gradient(ellipse_at_50%_120%,rgba(127,209,188,0.14),transparent_70%)] px-8 py-10 text-center">
-              <span className="flex h-16 w-16 items-center justify-center rounded-full border border-accent/40 bg-accent/10">
-                <Play size={24} weight="fill" className="ml-0.5 text-accent" />
-              </span>
-              <p className="mt-6 text-[22px] font-semibold tracking-tight text-foreground sm:text-[26px]">
-                {video.title}
-              </p>
-              <p className="mx-auto mt-2.5 max-w-[46ch] text-[14.5px] leading-relaxed text-muted">
-                {video.text}
-              </p>
-              <p className="mt-6 rounded-full border border-dashed border-border px-4 py-1.5 text-[12px] tracking-[0.04em] text-muted-dim">
-                Место под видео появится здесь
-              </p>
-            </div>
+          <div
+            className="relative mt-6 overflow-hidden rounded-3xl border border-border bg-surface shadow-[0_40px_120px_-40px_rgba(127,209,188,0.25)]"
+            style={{ aspectRatio: "1856 / 1084" }}
+          >
+            {playing ? (
+              <video
+                key={video.src}
+                src={video.src}
+                poster={video.poster}
+                controls
+                autoPlay
+                playsInline
+                onEnded={() => setPlaying(false)}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            ) : (
+              <button
+                type="button"
+                onClick={() => setPlaying(true)}
+                aria-label={`Смотреть видео: ${video.title}`}
+                className="group absolute inset-0 flex flex-col items-center justify-center bg-cover bg-center px-8 py-10 text-center"
+                style={{ backgroundImage: `url(${video.poster})` }}
+              >
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "radial-gradient(ellipse at 50% 120%, rgba(7,10,9,.55), rgba(7,10,9,.85) 70%)",
+                  }}
+                />
+                <span className="relative flex h-16 w-16 items-center justify-center rounded-full border border-accent/40 bg-accent/10 backdrop-blur-sm transition-transform group-hover:scale-105">
+                  <Play size={24} weight="fill" className="ml-0.5 text-accent" />
+                </span>
+                <p className="relative mt-6 text-[22px] font-semibold tracking-tight text-foreground sm:text-[26px]">
+                  {video.title}
+                </p>
+                <p className="relative mx-auto mt-2.5 max-w-[46ch] text-[14.5px] leading-relaxed text-muted">
+                  {video.text}
+                </p>
+              </button>
+            )}
           </div>
         </Reveal>
       </Container>
