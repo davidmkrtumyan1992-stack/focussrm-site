@@ -47,13 +47,13 @@ export function VideoDemo() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.08} className="mt-8 flex flex-wrap gap-2.5">
+        <Reveal delay={0.08} className="mt-8 grid grid-cols-2 gap-2.5 sm:flex sm:flex-wrap">
           {videos.map((v, i) => (
             <button
               key={v.label}
               type="button"
               onClick={() => setActive(i)}
-              className={`rounded-full border px-5 py-2.5 text-[14px] font-medium transition-colors ${
+              className={`w-full rounded-full border px-5 py-2.5 text-center text-[14px] font-medium transition-colors sm:w-auto ${
                 i === active
                   ? "border-accent/55 bg-accent/15 text-foreground"
                   : "border-border text-muted hover:text-foreground"

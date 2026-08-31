@@ -142,7 +142,10 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="relative z-[1]">
+            <div
+              className="relative z-[1]"
+              style={{ background: "linear-gradient(to bottom, rgba(7,10,9,.35), rgba(7,10,9,.92) 35%)" }}
+            >
               <HeroLiveStrip />
             </div>
           </div>
