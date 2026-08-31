@@ -66,7 +66,7 @@ export function VideoDemo() {
 
         <Reveal delay={0.12}>
           <div className="relative mt-6 overflow-hidden rounded-3xl border border-border bg-surface shadow-[0_40px_120px_-40px_rgba(127,209,188,0.25)]">
-            <div className="flex aspect-video flex-col items-center justify-center bg-[radial-gradient(ellipse_at_50%_120%,rgba(127,209,188,0.14),transparent_70%)] px-8 text-center">
+            <div className="flex aspect-video flex-col items-center justify-center bg-[radial-gradient(ellipse_at_50%_120%,rgba(127,209,188,0.14),transparent_70%)] px-8 py-10 text-center">
               <span className="flex h-16 w-16 items-center justify-center rounded-full border border-accent/40 bg-accent/10">
                 <Play size={24} weight="fill" className="ml-0.5 text-accent" />
               </span>

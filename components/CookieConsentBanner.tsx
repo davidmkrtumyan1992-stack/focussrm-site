@@ -118,7 +118,7 @@ export default function CookieConsentBanner() {
       {view === "compact" ? (
         <>
           <p className="m-0 text-[13px] leading-[1.55] text-foreground">
-            Мы используем файлы cookie, чтобы улучшить ваше взаимодействие с ресурсами Laxo. Продолжая
+            Мы используем файлы cookie, чтобы улучшить ваше взаимодействие с ресурсами Focussrm. Продолжая
             пользоваться сайтом, вы подтверждаете свое согласие с{" "}
             <a href={COOKIE_POLICY_URL} className="text-accent underline">
               политикой конфиденциальности
