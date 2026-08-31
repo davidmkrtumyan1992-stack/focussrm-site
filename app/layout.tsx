@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Golos_Text, IBM_Plex_Mono } from "next/font/google";
+import CookieConsentBanner from "@/components/CookieConsentBanner";
 import "./globals.css";
 
 const golosText = Golos_Text({
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <div className="relative z-10 flex min-h-full flex-1 flex-col">
           {children}
         </div>
+        <CookieConsentBanner />
       </body>
     </html>
   );
