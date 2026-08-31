@@ -9,13 +9,13 @@ const productLinks = [
 ];
 
 const docLinks = [
-  "Политика обработки персональных данных",
-  "Согласие на обработку персональных данных",
-  "Пользовательское соглашение",
-  "Публичная оферта на оказание услуг",
-  "Политика использования файлов cookie",
-  "Согласие на получение рекламных рассылок",
-  "Порядок оплаты и возврата средств",
+  { label: "Политика обработки персональных данных", href: "#" },
+  { label: "Согласие на обработку персональных данных", href: "#" },
+  { label: "Пользовательское соглашение", href: "#" },
+  { label: "Публичная оферта на оказание услуг", href: "#" },
+  { label: "Политика использования файлов cookie", href: "/cookie-policy" },
+  { label: "Согласие на получение рекламных рассылок", href: "#" },
+  { label: "Порядок оплаты и возврата средств", href: "#" },
 ];
 
 const companyLinks = [
@@ -48,9 +48,9 @@ export function Footer() {
 
           <div className="flex flex-col gap-3">
             <p className="text-[12px] font-medium uppercase tracking-[0.14em] text-accent">Документы</p>
-            {docLinks.map((label) => (
-              <a key={label} href="#" className="text-[13.5px] text-muted-dim transition-colors hover:text-foreground">
-                {label}
+            {docLinks.map((link) => (
+              <a key={link.label} href={link.href} className="text-[13.5px] text-muted-dim transition-colors hover:text-foreground">
+                {link.label}
               </a>
             ))}
           </div>
